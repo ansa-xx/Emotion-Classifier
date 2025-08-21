@@ -5,7 +5,7 @@ import torch.nn as nn
 from whisper.audio import load_audio, log_mel_spectrogram
 
 # Add FFmpeg path if needed
-os.environ["PATH"] += os.pathsep + "/home/ec2-user/project/ffmpeg/ffmpeg-git-20240629-amd64-static"
+os.environ["PATH"] += os.pathsep + "add path to ffmpeg"
 
 # Label mapping (must match training!)
 label_map = {

@@ -1,5 +1,5 @@
 import os
-os.environ["PATH"] += os.pathsep + "/home/ec2-user/project/ffmpeg/ffmpeg-git-20240629-amd64-static"
+os.environ["PATH"] += os.pathsep + "add path to ffmpeg"
 
 import torch
 from torch import nn
@@ -80,7 +80,7 @@ def compute_class_weights(labels):
     return torch.tensor([total / counts[i] for i in range(num_classes)], dtype=torch.float)
 
 # Load data
-data_dir = "combined_dataset"
+data_dir = "path to dataset"
 dataset = EmotionDataset(data_dir, label_map)
 train_size = int(0.8 * len(dataset))
 val_size = len(dataset) - train_size
@@ -96,7 +96,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
 scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', patience=2, factor=0.5)
 
 # Training loop
-num_epochs = 15
+num_epochs = 20
 best_val_acc = 0
 
 for epoch in range(num_epochs):

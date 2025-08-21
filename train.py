@@ -1,6 +1,4 @@
 import os
-os.environ["PATH"] += os.pathsep + "add path to ffmpeg"
-
 import torch
 from torch import nn
 from torch.utils.data import Dataset, DataLoader, random_split
@@ -10,6 +8,9 @@ from collections import Counter
 import random
 from sklearn.metrics import classification_report
 import numpy as np
+
+# Add FFmpeg path if needed
+os.environ["PATH"] += os.pathsep + "add path to ffmpeg"
 
 # Reproducibility
 seed = 42
